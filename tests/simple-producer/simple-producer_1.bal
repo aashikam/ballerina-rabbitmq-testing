@@ -1,5 +1,7 @@
 import ballerina/io;
+import ballerina/rabbitmq;
 
 public function main() {
-    io:println("Hello, World!");
+    rabbitmq:Connection connection = new({host:"localhost", port:5672});
+    //connection.close();
 }
