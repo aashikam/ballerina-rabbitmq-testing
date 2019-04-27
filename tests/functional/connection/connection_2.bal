@@ -1,3 +1,4 @@
+// Connecting to the broker with incorrect configurations
 import ballerina/io;
 import ballerina/rabbitmq;
 

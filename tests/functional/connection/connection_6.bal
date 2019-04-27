@@ -1,4 +1,4 @@
-// Connecting to the broker with valid configurations
+// Closing connection with timeout
 import ballerina/io;
 import ballerina/rabbitmq;
 
@@ -20,4 +20,11 @@ public function main() {
     if (sendResult is error) {
         io:println("An error occurred while sending the message");
     }
+
+    var closeResult = connection.close(timeout = 5000000);
+    if (closeResult is error) {
+        io:println("Error occurred while closing the connection");
+    }
+    boolean isClosedAfter = connection.isClosed();
+    io:println(isClosedAfter);
 }

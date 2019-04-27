@@ -1,3 +1,4 @@
+// Closing an already closed connection
 import ballerina/io;
 import ballerina/rabbitmq;
 
@@ -24,7 +25,7 @@ public function main() {
     if (closeResult is error) {
         io:println("Error occurred while closing the connection");
     }
-    
+
     var close2Result = connection.close();
     if (close2Result is error) {
         io:println("Error occurred while closing the connection again");

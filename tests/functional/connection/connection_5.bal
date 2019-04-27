@@ -1,3 +1,4 @@
+// Check whether a connection is closed
 import ballerina/io;
 import ballerina/rabbitmq;
 

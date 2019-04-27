@@ -1,3 +1,4 @@
+// Closing the connection
 import ballerina/io;
 import ballerina/rabbitmq;
 
