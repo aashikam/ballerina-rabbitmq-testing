@@ -1,4 +1,4 @@
-// Closing connection with close code and close message
+// Closing connection with timeout, close code and close message
 import ballerina/io;
 import ballerina/rabbitmq;
 
@@ -21,7 +21,7 @@ public function main() {
         io:println("An error occurred while sending the message");
     }
 
-    var closeResult = connection.close(closeCode = 200, closeMessage = "Connection closing");
+    var closeResult = connection.close(timeout = 500000, closeCode = 200, closeMessage = "Connection closing");
     if (closeResult is error) {
         io:println("Error occurred while closing the connection");
     }
